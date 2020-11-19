@@ -49,7 +49,7 @@ readdir(srcDir)
 .then(words => {
     const wordList = []
     for (const [key, value] of Object.entries(words)) {
-        wordList.push(`${key},${value}`)
+        wordList.push(`${key},${wordLevels[value]}`)
     }
     return wordList.join('\n')
 })
